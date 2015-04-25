@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the angularBlogApp
  */
-angular.module('angularBlogApp')
-  .controller('MainCtrl', function () {
+ angular.module('angularBlogApp')
+ .controller('MainCtrl', function () {
 
-  });
+ });

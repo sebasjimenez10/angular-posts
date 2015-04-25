@@ -1,21 +1,36 @@
-<div class="container">
-    <div class="cointainer text-right">
-        <a class="btn btn-lg btn-success" href="#/posts/new">Create New Post</a>
-    </div>
-    <h1>Posts Page</h1>
-    <br>
-    <div class="cointainer">
-        <div ng-controller="PostsCtrl">
-            <div ng-repeat="post in posts">
+<div class="container" ng-controller="PostsCtrl">
+  <div class="container">
+    <h1 class="pull-left">Posts Page</h1><br>
+    <a class="btn btn-success pull-right" href="#/posts/new">New Post</a>
+    <a class="btn pull-right" ng-class="{'btn-default': editable == false, 'btn-info': editable == true}" ng-click="toggleEditable()">Edit Posts</a>
+  </div>
+  
+  <br>
+  <div class="container">
+      
+      <p ng-show="editable">Editing posts...</p>
 
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">{{post.title}}</h3>
-                  </div>
-                  <div class="panel-body">{{post.body}}</div>
-                </div>
+      <!-- Show if there are some posts -->
+      <div ng-show="posts.length > 0">
+        <div ng-repeat="post in posts">
+          <div class="panel panel-default" alert-dismissible role="alert">
+            <div class="panel-heading">
+              <button type="button" ng-show="editable" class="close" ng-click="removePost($index)"><span aria-hidden="true">remove</span></button>
+              <h1 class="panel-title">{{post.title}}</h1>
             </div>
+            <div class="panel-body">{{post.body}}</div>          
+          </div>
         </div>
-    </div>
-    <br>
+      </div>
+
+      <!-- Show if there are not posts at all -->
+      <div ng-hide="posts.length > 0">
+
+        <div class="jumbotron">
+          <h2>There is nothing to show right now. Go create some posts and come back!</h2>
+        </div>
+      </div>
+
+    
+  </div>
 </div>
