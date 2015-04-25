@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="pull-left">Posts Page</h1><br>
     <a class="btn btn-success pull-right" href="#/posts/new">New Post</a>
-    <a class="btn pull-right" ng-class="{'btn-default': editable == false, 'btn-info': editable == true}" ng-click="toggleEditable()">Edit Posts</a>
+    <a class="btn pull-right" ng-show="posts.length > 0" ng-class="{'btn-default': editable == false, 'btn-info': editable == true}" ng-click="toggleEditable()">Edit Posts</a>
   </div>
   
   <br>
