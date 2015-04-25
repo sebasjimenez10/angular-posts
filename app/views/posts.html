@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="cointainer text-right">
+        <a class="btn btn-lg btn-success" href="#/posts/new">Create New Post</a>
+    </div>
+    <h1>Posts Page</h1>
+    <br>
+    <div class="cointainer">
+        <div ng-controller="PostsCtrl">
+            <div ng-repeat="post in posts">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">{{post.title}}</h3>
+                  </div>
+                  <div class="panel-body">{{post.body}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
