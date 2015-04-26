@@ -1,5 +1,7 @@
 # angular-blog
 
+[![Build Status](https://travis-ci.org/sebasjimenez10/angular-posts.svg)](https://travis-ci.org/sebasjimenez10/angular-posts)
+
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.11.1.
 
