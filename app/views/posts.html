@@ -23,7 +23,9 @@
             <button type="button" ng-show="editable" class="close" ng-click="removePost($index)"><span aria-hidden="true">[&times;]</span></button>
             <h1 class="panel-title">{{post.title}}</h1>
           </div>
-          <div class="panel-body">{{post.body}}</div>          
+          <div class="panel-body">
+            <p class="post-content">{{post.body}}</p>
+          </div>
         </div>
       </div>
     </div>
