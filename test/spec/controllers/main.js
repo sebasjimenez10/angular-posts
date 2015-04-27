@@ -16,4 +16,8 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
+  it('should have a variable app set to BlogApp', function () {
+    expect(scope.app).toBe('BlogApp');
+  });
+
 });

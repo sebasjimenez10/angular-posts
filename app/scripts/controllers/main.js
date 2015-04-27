@@ -8,6 +8,8 @@
  * Controller of the angularBlogApp
  */
  angular.module('angularBlogApp')
- .controller('MainCtrl', function () {
+ .controller('MainCtrl', function ($scope) {
+
+ 	$scope.app = 'BlogApp';
 
  });
